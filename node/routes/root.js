@@ -1,5 +1,4 @@
 import { database } from "../express.js";
-import { rootStyles } from "../styles/root.js";
 import { addRootPage } from "../templates/root.js";
 import { faker } from "../utils/faker.js";
 import express from "express";
@@ -23,7 +22,7 @@ rootRouter.get("/", async (_req, res) => {
       function (error, results, _fields) {
         connection.release();
 
-        const data = addRootPage({ results }, rootStyles);
+        const data = addRootPage({ results });
 
         res.send(data);
 

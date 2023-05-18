@@ -1,15 +1,18 @@
-export const addRootPage = (props, styles) => {
+export const addRootPage = (props) => {
   let data =
     ` 
-  <nav className="navbar-container">
-    <div className="navbar-content">
-        <span className="navbar-logout-button-text">
+  <link rel="stylesheet" href="./index.css" />
+  <nav class="navbar-container">
+    <div class="navbar-content">
+        <span class="navbar-logout-button-text">
           Full Cycle Rocks!
         </span>
     </div>
   </nav>
+  <div class="main-images">
     <img src="./img/fc-image.svg" />
     <img src="./img/fc.svg" />
+  </div>
 <table id="table_id" class="display">
 <caption>Lista de nomes cadastrada no banco de dados</caption>
     <thead>
@@ -29,7 +32,7 @@ export const addRootPage = (props, styles) => {
       
     </tbody>
 </table>
-    ` + styles;
+    `;
 
   return data.replaceAll(",", "");
 };
