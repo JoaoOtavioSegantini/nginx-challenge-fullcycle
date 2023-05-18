@@ -19,7 +19,7 @@ rootRouter.get("/", async (_req, res) => {
     connection.query(sql);
 
     connection.query(
-      "SELECT name FROM people",
+      "SELECT id, name FROM people",
       function (error, results, _fields) {
         connection.release();
 

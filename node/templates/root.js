@@ -1,8 +1,35 @@
 export const addRootPage = (props, styles) => {
   let data =
-    `<div><h1>Full Cycle Rocks!</h1> <ul>Lista de nomes cadastrada no banco de dados${props.results.map(
-      (p, i) => `<li key={${i}}>${p.name}</li>`
-    )}</ul></div>` + styles;
+    ` 
+  <nav className="navbar-container">
+    <div className="navbar-content">
+        <span className="navbar-logout-button-text">
+          Full Cycle Rocks!
+        </span>
+    </div>
+  </nav>
+    <img src="./img/fc-image.svg" />
+    <img src="./img/fc.svg" />
+<table id="table_id" class="display">
+<caption>Lista de nomes cadastrada no banco de dados</caption>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nome</th>
+        </tr>
+    </thead>
+    <tbody>
+    ${props.results.map(
+      (p) => `  
+    <tr key={${p.id}}>
+        <td>${p.id}</td>
+        <td>${p.name}</td>
+    </tr>`
+    )}
+      
+    </tbody>
+</table>
+    ` + styles;
 
   return data.replaceAll(",", "");
 };
