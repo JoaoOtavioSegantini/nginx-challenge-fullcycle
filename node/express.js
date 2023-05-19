@@ -15,5 +15,5 @@ export const database = mysql.createPool(config);
 
 app.use("/", rootRouter);
 
-app.use(express.static('public'))
-app.use(express.static('styles'))
+app.use(express.static("public"));
+app.use(express.static("styles"));

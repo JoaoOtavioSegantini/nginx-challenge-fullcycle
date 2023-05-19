@@ -4,7 +4,7 @@ export const addRootPage = (props) => {
   <link rel="stylesheet" href="./index.css" />
   <nav class="navbar-container">
     <div class="navbar-content">
-        <span class="navbar-logout-button-text">
+        <span class="navbar-text">
           Full Cycle Rocks!
         </span>
     </div>
